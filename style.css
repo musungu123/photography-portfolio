@@ -21,9 +21,7 @@ body {
     padding: 50px 24px;
 }
 
-/* ==========================================================================
-   2. TYPOGRAPHY & HEADER ARCHITECTURE
-   ========================================================================== */
+/*2. TYPOGRAPHY & HEADER ARCHITECTURE */
 .main-header {
     background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
                       url('https://images.unsplash.com/photo-1452784444945-3f422708fe5e?auto=format&fit=crop&w=1600&q=80');
@@ -33,7 +31,7 @@ body {
     color: #ffffff;
     text-align: center;
     padding: 110px 20px;
-    border-bottom: 5px solid #0f172a; /* Custom border enforcement */
+    border-bottom: 5px solid #0f172a; 
 }
 
 .main-header h1 {
