@@ -15,7 +15,7 @@ body {
 
 /* Base Block Elements & Structural Layout Containers */
 .main-container {
-    display: block; /* Explicit block element enforcement */
+    display: block; 
     max-width: 1040px;
     margin: 0 auto;
     padding: 50px 24px;
