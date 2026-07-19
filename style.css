@@ -1,1 +1,306 @@
+/*1. GLOBAL ARCHITECTURE & BOX MODEL DEFINITIONS */
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f4f6f8; 
+    color: #1e293b;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Base Block Elements & Structural Layout Containers */
+.main-container {
+    display: block; 
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 50px 24px;
+}
+
+/*2. TYPOGRAPHY & HEADER ARCHITECTURE */
+.main-header {
+    background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
+                      url('https://images.unsplash.com/photo-1452784444945-3f422708fe5e?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    text-align: center;
+    padding: 110px 20px;
+    border-bottom: 5px solid #0f172a; 
+}
+
+.main-header h1 {
+    font-size: 3.2rem;
+    font-weight: 800; 
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    color: #94a3b8;
+}
+
+.tagline em {
+    font-style: italic; 
+    color: #cbd5e1;
+}
+
+/* Inline typography tag overrides */
+strong {
+    font-weight: 700;
+    color: #0f172a;
+}
+
+em {
+    font-style: italic;
+}
+
+/* 3. SECTIONAL COMPONENTS & CONTENT LAYOUTS */
+section {
+    background-color: #ffffff; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 12px;
+    padding: 45px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    border-left: 5px solid #3b82f6; 
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+}
+
+/* Biography Grid Custom Layout */
+.intro-grid {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.intro-img {
+    flex: 1 1 300px;
+}
+
+.profile-img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+}
+
+.intro-text {
+    flex: 2 1 450px;
+}
+
+.intro-paragraph {
+    font-size: 1.2rem;
+    color: #334155;
+    margin-bottom: 15px;
+}
+
+/*  4. CURATED GALLERY (LIST SECTORS & PSEUDOCLASSES) */
+.gallery-subtitle {
+    margin-bottom: 30px;
+    color: #64748b;
+}
+
+.photo-collection {
+    list-style-type: none; 
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.frame-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden; /* Clear Overflow requirement to maintain rounded aspect curves */
+    display: flex;
+    flex-wrap: wrap;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Interactive transitions */
+}
+
+/* Hover pseudoclass rule applied to structural list blocks */
+.frame-card:hover {
+    transform: translateY(-6px); /* Interactive shifts on user hover state */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: #cbd5e1;
+}
+
+.img-overflow-wrapper {
+    flex: 1 1 350px;
+    overflow: hidden; /* Nested item overflow defense */
+}
+
+.frame-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    object-fit: cover;
+    display: block; /* Native block scaling adjustment */
+}
+
+.frame-details {
+    flex: 1 2 400px;
+    padding: 30px;
+}
+
+.frame-details h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+.accent-text {
+    color: #3b82f6; /* Custom text accent highlight */
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   5. DESIGN SPECIFICATION LAYOUT & FORM ELEMENTS
+   ========================================================================== */
+.blueprint-intro {
+    margin-bottom: 25px;
+    color: #475569;
+}
+
+.blueprint-card {
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 30px 40px;
+}
+
+.spec-list {
+    padding-left: 15px; /* Ordered list item numbering spacing reset */
+}
+
+.spec-list li {
+    margin-bottom: 15px;
+    color: #334155;
+}
+
+.spec-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* User Form Element Styles */
+.form-desc {
+    margin-bottom: 35px;
+    color: #475569;
+}
+
+.portfolio-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-group-row .form-control {
+    flex: 1 1 200px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-control label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.form-control input, 
+.form-control textarea {
+    padding: 12px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #0f172a;
+    background-color: #f8fafc;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Focus input state pseudoclass definitions */
+.form-control input:focus, 
+.form-control textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background-color: #ffffff;
+}
+
+.submit-btn {
+    align-self: flex-start;
+    padding: 14px 28px;
+    background-color: #3b82f6;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Button interactive pseudoclass rule */
+.submit-btn:hover {
+    background-color: #2563eb;
+}
+
+/* ==========================================================================
+   6. SITE FOOTER CONFIGURATION
+   ========================================================================== */
+.main-footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 0.95rem;
+    border-top: 4px solid #1e293b;
+}
+
+.repo-link-wrap {
+    margin-top: 15px;
+}
+
+.footer-git-link {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+/* Footer Link Pseudoclass */
+.footer-git-link:hover {
+    color: #60a5fa;
+    text-decoration: underline;
+}

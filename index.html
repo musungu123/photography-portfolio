@@ -11,7 +11,7 @@
     <header class="main-header">
         <div>
             <h1>Captured Forever</h1>
-            <p><em>"Photography is a way of feeling, touching and of loving. What you have caught on film is captured forever" </em></p>
+            <p class="tagline"><em>"Photography is a way of feeling, touching and of loving. What you have caught on film is captured forever" </em></p>
         </div>
     </header>
     <div class="main-container">
@@ -21,14 +21,14 @@
                 <h2>The Storyteller and The Space</h2>
             </div>
             <div class="intro-grid">
-                <img src="https://iso.500px.com/wp-content/uploads/2015/03/elia_cover.jpeg" alt="A beatiful photo" height="500px" width="800px">
+                <img class="intro-img" src="https://iso.500px.com/wp-content/uploads/2015/03/elia_cover.jpeg" alt="A beatiful photo" height="500px" width="800px">
             </div>
             <div class="intro-text">
                 <p class="intro-paragraph">Welcome to <strong>captured forever</strong>, a custom digital sanctuary built to preserve fleeting moments. While human memories are prone to fading, the textures captured on a film endure indefinitely. This platform serves as a curated home for those rare fraction of a second where light, timing, and raw emotion aligned perfectly.</p>
-                <p>I am the principal creator and curator behind this repository. My philosophy leans heavily toward raw, unfiltered environmental portraits and deep landscapes. To me, a camera is not merely a technical tool; it is an emotional extension that <em>remembers the little things, long after you have forgotten everything</em></p>
+                <p>I am the principal creator and curator behind this repository. My philosophy leans heavily toward raw, unfiltered environmental portraits and deep landscapes. To me, a camera is not merely a technical tool; it is an emotional extension that <em>remembers the little things, long after you have forgotten everything.</em></p>
             </div>
         </section>
-        <!-- Favorite Photos Gallery Section -->
+        <!--  Gallery Section -->
         <section class="gallery-section">
             <div class="section-title">
                 <h2>Curated Favorites</h2>
@@ -71,6 +71,65 @@
                 </li>
             </ul>
         </section>
+        <!-- Dynamic Attached Project Design Specification -->
+        <section class="blueprint-section">
+            <div class="section-title">
+                <h2>Attached Project Design Review</h2>
+            </div>
+            <p class="blueprint-intro">To fulfill engineering objectives, this application underwent a rigorous initial design validation. Below is the master blueprint log attached for peer and architectural evaluations:</p>
+            
+            <div class="blueprint-card">
+                <ol class="spec-list">
+                    <li><strong>Layout Form Block Structure:</strong> Organized utilizing a container system bounded by fixed max-widths to guarantee cross-device presentation fluidity.</li>
+                    <li><strong>Box Model Constraint System:</strong> Applied explicitly across all elements with border-box handling to maintain pristine layout spacing balances without arithmetic anomalies.</li>
+                    <li><strong>Typography Scheme:</strong> Anchored around modern, varied font weights paired with italic accents to contrast structural elements cleanly against background layouts.</li>
+                    <li><strong>Overflow Shield System:</strong> Gallery cards run dynamic clip values to constrain media components cleanly inside rounded borders during interactive transformation events.</li>
+                </ol>
+            </div>
+        </section>
+        <!--  Contact Submission Form Section -->
+        <section class="contact-section">
+            <div class="section-title">
+                <h2>Secure a Session</h2>
+            </div>
+            <p class="form-desc">Interested in collaborating, licensing prints, or initiating a creative project consultation? Submit your verified details below.</p>
+            
+            <!-- HTML form -->
+            <form action="#" method="POST" class="portfolio-form" onsubmit="event.preventDefault(); alert('Inquiry successfully captured! Clearing your form data now.'); this.reset();">
+                <div class="form-group-row">
+                    <div class="form-control">
+                        <label for="username">Full Professional Name *</label>
+                        <input type="text" id="username" name="username" placeholder="Jane Doe" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="useremail">Email Address *</label>
+                        <input type="email" id="useremail" name="useremail" placeholder="jane@example.com" required>
+                    </div>
+                </div>
+                
+                <div class="form-control">
+                    <label for="subject">Project Consultation Subject *</label>
+                    <input type="text" id="subject" name="subject" placeholder="Editorial, Commercial Booking, etc." required>
+                </div>
+                
+                <div class="form-control">
+                    <label for="usermessage">Detailed Inquiry Specification *</label>
+                    <textarea id="usermessage" name="usermessage" rows="6" placeholder="Provide background on timelines, locations, and scope details..." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Transmit Secure Request</button>
+            </form>
+        </section>
+
     </div>
+    <!-- Page Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Captured Forever Portfolio Archive. Handcrafted by an Independent Creative Artist.</p>
+        <p class="repo-link-wrap">
+            <a href="https://github.com/musungu123/photography-portfolio.git" target="_blank" rel="noopener noreferrer" class="footer-git-link">
+                Explore the Public Version Control Codebase on GitHub
+            </a>
+        </p>
+    </footer>
 </body>
 </html>
