@@ -87,7 +87,7 @@ section h2 {
 }
 
 /* Biography Grid Custom Layout */
-.bio-grid {
+.intro-grid {
     display: flex;
     gap: 40px;
     align-items: center;
