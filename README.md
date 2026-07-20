@@ -1,8 +1,7 @@
 # photography-portfolio
 # Captured Forever — Photography Portfolio Archive
 
-### Author: [Your Name]
-### Live Site URL: https://[musungu123].github.io/photography-portfolio/
+### Author: Joyce Imbuhila Musungu
 
 ---
 
